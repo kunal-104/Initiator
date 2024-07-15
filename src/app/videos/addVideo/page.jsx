@@ -23,7 +23,7 @@ import VideoEditor from "@/app/components/Editor/VideoEditor";
 import { useContent } from "../../contexts/ContentContext";
 
 
-const addVideo = () => {
+const AddVideo = () => {
   const { addVideo, user } = useContent();
   const videoEditorInstanceRef = useRef(null);
 
@@ -324,4 +324,4 @@ const handleSaveVideo = async () => {
   );
 };
 
-export default addVideo;
+export default AddVideo;
