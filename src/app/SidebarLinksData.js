@@ -10,7 +10,7 @@ import { HiUserGroup } from "react-icons/hi";
 import { FaHouse } from "react-icons/fa6";
 import { MdArticle } from "react-icons/md";
 import { RiYoutubeFill } from "react-icons/ri";
-const links = [
+const Links = [
 
   { name: 'Home', href: '/', icon: FaHouse },
   { name: 'Blogs', href: '/blogs', icon: HiUserGroup },
@@ -19,7 +19,7 @@ const links = [
   { name: 'Videos', href: '/videos', icon: RiYoutubeFill },
   { name: 'Dashboard', href: '/dashboard', icon: MdSpaceDashboard },
 
-  // Add more links as needed
+  // Add more Links as needed
 ];
 
-export default links;
+export default Links;

@@ -21,7 +21,7 @@ import {
 import React, { useRef, useEffect, useState } from "react";
 import Sidebar from "../components/sidebar";
 import Header from "../components/header";
-import links from "../SidebarLinksData";
+import Links from "../SidebarLinksData";
 import { useContent } from "../contexts/ContentContext";
 import { IoPersonSharp } from "react-icons/io5";
 
@@ -183,11 +183,11 @@ const Videos = () => {
       }
     });
   };
-  const homeLink = links.find((link) => link.name === "Home");
-  const videosLink = links.find((link) => link.name === "Videos");
+  const homeLink = Links.find((link) => link.name === "Home");
+  const videosLink = Links.find((link) => link.name === "Videos");
   return (
     <div className="flex flex-col md:flex-row h-screen bg-bodybg">
-      <Sidebar links={links} className="flex-none w-full md:w-auto" />
+      <Sidebar Links={Links} className="flex-none w-full md:w-auto" />
       <div className="flex-1 flex flex-col overflow-hidden sm:ml-8">
         {videoLoading || loading ? (
           <Progress

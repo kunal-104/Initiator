@@ -5,7 +5,7 @@ import { Card, CardHeader, CardBody, Button, Breadcrumbs, BreadcrumbItem } from 
 import { Line } from 'react-chartjs-2';
 import Sidebar from '../components/sidebar';
 import Header from '../components/header';
-import links from "../SidebarLinksData";
+import Links from "../SidebarLinksData";
 import { useEffect } from "react";
 import {
   Chart as ChartJS,
@@ -63,9 +63,9 @@ ChartJS.register(
   Legend
 );
 
-const dashboard = () => {
-  const homeLink = links.find(link => link.name === 'Home');
-const dashboardLink = links.find(link => link.name === 'Dashboard');
+const Dashboard = () => {
+  const homeLink = Links.find(link => link.name === 'Home');
+const dashboardLink = Links.find(link => link.name === 'Dashboard');
 const { setSearchTerm } = useContent();
 const router = useRouter();
 useEffect(() => {
@@ -74,7 +74,7 @@ useEffect(() => {
   //  const variants = ["solid", "bordered", "light"];
   return (
     <div className="flex flex-col md:flex-row h-screen bg-bodybg">
-      <Sidebar links={links} className="flex-none w-full md:w-auto" />
+      <Sidebar Links={Links} className="flex-none w-full md:w-auto" />
       <div className="flex-1 flex flex-col overflow-hidden sm:ml-8">
         <Header />
         <div className="flex-1 overflow-x-hidden overflow-y-auto p-8 sm:ml-8">
@@ -187,7 +187,7 @@ useEffect(() => {
   );
 };
 
-export default dashboard;
+export default Dashboard;
 
 
 
@@ -200,7 +200,7 @@ export default dashboard;
 // import { Line } from 'react-chartjs-2';
 // import Sidebar from '../components/sidebar';
 // import Header from '../components/header';
-// import links from "../SidebarLinksData";
+// import Links from "../SidebarLinksData";
 // import {
 //   Chart as ChartJS,
 //   CategoryScale,
@@ -260,7 +260,7 @@ export default dashboard;
 // const dashboard = () => {
 //   return (
 //     <div className="flex flex-col md:flex-row h-screen bg-bodybg">
-//   <Sidebar links={links} className="flex-none w-full md:w-auto" />
+//   <Sidebar Links={Links} className="flex-none w-full md:w-auto" />
 //   <div className="flex-1 flex flex-col overflow-hidden sm:ml-8">
 //     <Header />
 //     <div className="flex-1 overflow-x-hidden overflow-y-auto p-8 sm:ml-8">

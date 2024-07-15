@@ -2,7 +2,7 @@ import React from "react";
 import {Dropdown, DropdownTrigger, DropdownMenu, DropdownItem, Button} from "@nextui-org/react";
 import { CgMenuLeft } from "react-icons/cg";
 import Link from "next/link";
-export default function MenuButton({links}) {
+export default function MenuButton({Links}) {
   return (
     <Dropdown  backdrop="blur">
       <DropdownTrigger>
@@ -16,7 +16,7 @@ export default function MenuButton({links}) {
       </DropdownTrigger>
       <DropdownMenu className="bg-sidebarbg rounded-xl" variant="faded" aria-label="Static Actions">
         
-        {links.map((link, index) => (
+        {Links.map((link, index) => (
              <DropdownItem key={index} >
              <Link href={link.href} passHref className="hover:text-hoverEff group">
                <div className="py-2 cursor-pointer flex justify-between ">

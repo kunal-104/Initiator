@@ -23,7 +23,7 @@ import {
   ModalContent,
   Avatar,
 } from "@nextui-org/react"; // Adjust according to your UI library
-import links from "../SidebarLinksData";
+import Links from "../SidebarLinksData";
 import { FaUser } from "react-icons/fa6";
 import { IoPersonSharp } from "react-icons/io5";
 
@@ -38,7 +38,7 @@ const ProfilePage = () => {
   const [selected, setSelected] = useState("blog");
   const [loading, setLoading] = useState(false);
   const [userContent, setUserContent] = useState({ articles: [], videos: [], blogs: [] });
-  const homeLink = links.find((link) => link.name === "Home");
+  const homeLink = Links.find((link) => link.name === "Home");
 
   useEffect(()=>{
     if(!user){
@@ -104,7 +104,7 @@ const ProfilePage = () => {
 
   return (
     <div className="flex flex-col md:flex-row h-screen bg-bodybg">
-      <Sidebar links={links} className="flex-none w-full md:w-auto" />
+      <Sidebar Links={Links} className="flex-none w-full md:w-auto" />
       <div className="flex-1 flex flex-col overflow-hidden sm:ml-8">
         {/* <Header /> */}
         <div className="flex-1 overflow-x-hidden overflow-y-auto p-4 sm:ml-20">

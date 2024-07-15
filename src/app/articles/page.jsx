@@ -16,7 +16,7 @@ import {
 } from "@nextui-org/react";
 import { IoPersonSharp } from "react-icons/io5";
 import React, { useState, useRef, useEffect } from "react";
-import links from "../SidebarLinksData";
+import Links from "../SidebarLinksData";
 import Sidebar from "../components/sidebar";
 import Header from "../components/header";
 import { useContent } from "../contexts/ContentContext";
@@ -136,12 +136,12 @@ const Articles = () => {
       }
     });
   };
-  const homeLink = links.find(link => link.name === 'Home');
-const articlesLink = links.find(link => link.name === 'Articles');
+  const homeLink = Links.find(link => link.name === 'Home');
+const articlesLink = Links.find(link => link.name === 'Articles');
   return (
     <div className="flex flex-col md:flex-row h-screen bg-bodybg">
       <div className="fixed z-20">
-        <Sidebar links={links} className="flex-none w-full md:w-auto" />
+        <Sidebar Links={Links} className="flex-none w-full md:w-auto" />
       </div>
       <div className="flex-1 flex flex-col overflow-hidden sm:ml-8">
       {(artLoading || loading) ? 
@@ -389,7 +389,7 @@ export default Articles;
 // } from "@nextui-org/react";
 // import { IoPersonSharp } from "react-icons/io5";
 // import React, { useState, useRef, useEffect } from "react";
-// import links from "../SidebarLinksData";
+// import Links from "../SidebarLinksData";
 // import Sidebar from "../components/sidebar";
 // import Header from "../components/header";
 // import { useContent } from "../contexts/ContentContext";
@@ -497,12 +497,12 @@ export default Articles;
 //       }
 //     });
 //   };
-//   const homeLink = links.find(link => link.name === 'Home');
-// const articlesLink = links.find(link => link.name === 'Articles');
+//   const homeLink = Links.find(link => link.name === 'Home');
+// const articlesLink = Links.find(link => link.name === 'Articles');
 //   return (
 //     <div className="flex flex-col md:flex-row h-screen bg-bodybg">
 //       <div className="fixed z-20">
-//         <Sidebar links={links} className="flex-none w-full md:w-auto" />
+//         <Sidebar Links={Links} className="flex-none w-full md:w-auto" />
 //       </div>
 //       <div className="flex-1 flex flex-col overflow-hidden sm:ml-8">
 //       {loading ? 

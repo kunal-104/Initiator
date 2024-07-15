@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@nextui-org/react";
 import MenuButton from "./MenuButton";
 
-const Sidebar = ({ links = [] }) => {
+const Sidebar = ({ Links = [] }) => {
   const router = useRouter();
 
   const handleNavigation = (props) => {
@@ -18,7 +18,7 @@ const Sidebar = ({ links = [] }) => {
   return (
     <div className="fixed z-50 abcd">
     <div className="fixed bottom-8 left-4 flex z-1111 sm:hidden">
-      <MenuButton links={links} />
+      <MenuButton Links={Links} />
     </div>
     <div className="look ">
       <div
@@ -38,7 +38,7 @@ const Sidebar = ({ links = [] }) => {
           className="space-y-2 ijkl h-[400px] w-full 
         flex flex-col justify-evenly"
         >
-          {links.map((link, index) => (
+          {Links.map((link, index) => (
             <div key={index} className="">
               <Link
                 key={index}
@@ -60,7 +60,7 @@ const Sidebar = ({ links = [] }) => {
   </div>
     // <div className="fixed z-50 abcd ">
     //   <div className="fixed bottom-8 left-4 flex z-1111 sm:hidden">
-    //     <MenuButton links={links} />
+    //     <MenuButton Links={Links} />
     //   </div>
     //   <div className="look ">
     //     <div
@@ -80,7 +80,7 @@ const Sidebar = ({ links = [] }) => {
     //         className="space-y-2 ijkl h-[400px] w-full 
     //       flex flex-col justify-evenly"
     //       >
-    //         {links.map((link, index) => (
+    //         {Links.map((link, index) => (
     //           <div className="">
     //             <Link
     //               key={index}
@@ -113,7 +113,7 @@ export default Sidebar;
 // import { useRouter } from "next/navigation";
 // import { Button } from "@nextui-org/react";
 // import MenuButton from "./MenuButton";
-// const Sidebar = ({ links = [] }) => {
+// const Sidebar = ({ Links = [] }) => {
 //   const router = useRouter();
 
 //   const handleNavigation = (props) => {
@@ -122,7 +122,7 @@ export default Sidebar;
 //   return (
 //     <div className="fixed z-50 abcd ">
 //       <div className="fixed bottom-8 left-4 flex z-1111 sm:hidden">
-//           <MenuButton links={links}/>
+//           <MenuButton Links={Links}/>
 //         </div>
 //       <div className="look">
 
@@ -144,7 +144,7 @@ export default Sidebar;
 //           flex flex-col justify-evenly
 //           "
 //           >
-//             {links.map((link, index) => (
+//             {Links.map((link, index) => (
 //               <a key={index} href={link.href} className="ab flex items-center justify-between px-4 py-2 rounded-xl group transition duration-200 ease-in-out hover:bg-maincolor">
 //                 <link.icon className='a text-maincolor w-8 h-8' />
 //                 <span className='ml-3 b text-xl text-gray-700 hidden group-hover:inline-block'>{link.name}</span>

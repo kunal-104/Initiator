@@ -32,9 +32,9 @@ import { IoPersonSharp } from "react-icons/io5";
 import Sidebar from "./components/sidebar";
 import Header from "./components/header";
 import { useState, useEffect, useRef } from "react";
-import links from "./SidebarLinksData";
+import Links from "./SidebarLinksData";
 import { useContent } from "./contexts/ContentContext";
-const home = () => {
+const Home = () => {
   const {
     content,
     selected,
@@ -51,7 +51,7 @@ const home = () => {
   const [tabSize, setTabSize] = useState('md'); // Default size
 
 
-  const homeLink = links.find((link) => link.name === "Home");
+  const homeLink = Links.find((link) => link.name === "Home");
   // const [selected, setSelected] = useState("user");
   // const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -87,7 +87,7 @@ const home = () => {
 
   return (
     <div className="flex flex-col md:flex-row h-screen bg-bodybg">
-      <Sidebar links={links} className="flex-none w-full md:w-auto" />
+      <Sidebar Links={Links} className="flex-none w-full md:w-auto" />
 
       <div className="flex-1 flex flex-col overflow-hidden sm:ml-8">
         {searchTerm ? (
@@ -563,4 +563,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;

@@ -5,13 +5,13 @@ import {
 } from "@nextui-org/react";
 import { IoPersonSharp } from "react-icons/io5";
 import React, { useState, useRef, useEffect } from "react";
-import links from "../SidebarLinksData";
+import Links from "../SidebarLinksData";
 import Sidebar from "../components/sidebar";
 import Header from "../components/header";
 import { useContent } from "../contexts/ContentContext";
 import {  LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 
-const blogs = () => {
+const Blogs = () => {
   const { content , setBlogs, user, setSelected, results, loading, setLoading, searchTerm, setSearchTerm } = useContent();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [selectedContent, setSelectedContent] = useState({});
@@ -117,12 +117,12 @@ if(content.blogs.length === 0){
       }
     });
   };
-  const homeLink = links.find(link => link.name === 'Home');
-const blogsLink = links.find(link => link.name === 'Blogs');
+  const homeLink = Links.find(link => link.name === 'Home');
+const blogsLink = Links.find(link => link.name === 'Blogs');
   return (
     <div className="flex flex-col md:flex-row h-screen bg-bodybg">
       <div className="fixed z-20">
-        <Sidebar links={links} className="flex-none w-full md:w-auto" />
+        <Sidebar Links={Links} className="flex-none w-full md:w-auto" />
       </div>
       <div className="flex-1 flex flex-col overflow-hidden sm:ml-8">
        
@@ -348,7 +348,7 @@ const extractVideoId = (url) => {
   return videoIdMatch ? videoIdMatch[1] : null;
 };
 
-export default blogs;
+export default Blogs;
 
 
 // 'use client';
@@ -358,7 +358,7 @@ export default blogs;
 // } from "@nextui-org/react";
 // import { IoPersonSharp } from "react-icons/io5";
 // import React, { useState, useRef, useEffect } from "react";
-// import links from "../SidebarLinksData";
+// import Links from "../SidebarLinksData";
 // import Sidebar from "../components/sidebar";
 // import Header from "../components/header";
 // import { useContent } from "../contexts/ContentContext";
@@ -460,12 +460,12 @@ export default blogs;
 //       }
 //     });
 //   };
-//   const homeLink = links.find(link => link.name === 'Home');
-// const blogsLink = links.find(link => link.name === 'Blogs');
+//   const homeLink = Links.find(link => link.name === 'Home');
+// const blogsLink = Links.find(link => link.name === 'Blogs');
 //   return (
 //     <div className="flex flex-col md:flex-row h-screen bg-bodybg">
 //       <div className="fixed z-20">
-//         <Sidebar links={links} className="flex-none w-full md:w-auto" />
+//         <Sidebar Links={Links} className="flex-none w-full md:w-auto" />
 //       </div>
 //       <div className="flex-1 flex flex-col overflow-hidden sm:ml-8">
        
